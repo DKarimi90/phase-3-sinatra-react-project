@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
 
     #defining an update path for update the status of indivdiual projects 
 
-    patch 'projects/:id' do 
+    patch '/projects/:id' do 
       project = Project.find(params[:id])
       project.update(
         status: params[:status]
