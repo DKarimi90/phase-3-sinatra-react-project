@@ -27,6 +27,17 @@ class ApplicationController < Sinatra::Base
       )
       project.to_json 
     end
+
+    #defining an update path for update the status of indivdiual projects 
+
+    patch 'projects/:id' do 
+      project = Project.find(params[:id])
+      project.update(
+        status: params[:status]
+
+      ) 
+      project.to_json 
+    end
   
 
 
