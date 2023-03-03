@@ -7,6 +7,11 @@ class ApplicationController < Sinatra::Base
       projects.to_json 
      end
 
+     get '/members' do 
+      members = Member.all
+      members.to_json
+     end
+
     #defining a delete path for destroying individual projects 
      delete '/projects/:id' do 
       project = Project.find(params[:id])
