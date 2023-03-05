@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
     #defining a method to access all projects 
     get '/projects' do
       projects = Project.all
-      projects.to_json 
+      projects.to_json(include: :members) 
      end
 
       #defining a method to access all members
@@ -51,7 +51,6 @@ class ApplicationController < Sinatra::Base
       project = Project.find(params[:id])
       project.update(
         status: params[:status]
-
       ) 
       project.to_json 
     end

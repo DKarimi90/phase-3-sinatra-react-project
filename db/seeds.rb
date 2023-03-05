@@ -3,6 +3,7 @@ puts "🌱 Seeding spices..."
     #iterate 6 times to genderate projects 
 
     10.times do 
+        seconds = rand(25..60) * 86400
         project = Project.create(
             title: Faker::Company.name, 
             goals: Faker::Lorem.sentence, 

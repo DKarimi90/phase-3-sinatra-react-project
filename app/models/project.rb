@@ -6,4 +6,6 @@ class Project < ActiveRecord::Base
 
     attribute :timestamps, :datetime 
 
+
+
 end
