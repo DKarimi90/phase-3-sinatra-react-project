@@ -6,6 +6,8 @@ In this project, the goal was to develop an online web application to manage dif
 ## Project Setup 
 To use this project, just click on the provided deployment link to launch it on the web-browser. You will require no special installations when using this method. It is also required you click on the front-end deployment link in order to view and interact with the app on the web. The front-end repo link is provided here-in this file(bottom). Alternatively, you can clone the project into your machine (you may need to clone both the backend and front-end repositories when using this approach).  Once cloned, navigate to the folder you have cloned the repo by running the cmd `cd phase-3-sinatra-react-project` and run cmd `bundle install` to install all the necessary gems. Finally run the cmd `rake server` or `bundle exec rake server` to get the launch the back-end server. Repeat the procedure to clone the front-end repo but instead run the cmd `npm install` and `npm start` to install necessary dependencies and launch the app on the web browser. 
 
+NB: kindly refresh on the "Projects" tab as the link breaks at times (working to improve on that)
+
 ## Technologies used 
 - HTML5<br>
 - Cascading Style Sheet<br>
