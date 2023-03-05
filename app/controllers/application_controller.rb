@@ -1,16 +1,28 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
-    #defining a a method to access all projects 
+    #defining a method to access all projects 
     get '/projects' do
       projects = Project.all
       projects.to_json 
      end
 
+      #defining a method to access all members
      get '/members' do 
       members = Member.all
       members.to_json
      end
+
+    #  get '/projects/:id' do
+    #   id = params[:id].to_i
+    #   project = projects.find { |p| p.id == id }
+    #   if project
+    #     project.to_json
+    #   else 
+    #     status 404
+    #   end
+
+    #  end
 
     #defining a delete path for destroying individual projects 
      delete '/projects/:id' do 
