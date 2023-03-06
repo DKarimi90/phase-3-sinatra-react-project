@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
     #defining a method to access all projects 
     get '/projects' do
       projects = Project.all
-      projects.to_json(include: :members) 
+      projects.to_json 
      end
 
       #defining a method to access all members
@@ -13,16 +13,6 @@ class ApplicationController < Sinatra::Base
       members.to_json
      end
 
-    #  get '/projects/:id' do
-    #   id = params[:id].to_i
-    #   project = projects.find { |p| p.id == id }
-    #   if project
-    #     project.to_json
-    #   else 
-    #     status 404
-    #   end
-
-    #  end
 
     #defining a delete path for destroying individual projects 
      delete '/projects/:id' do 
